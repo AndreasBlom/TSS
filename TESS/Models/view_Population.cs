@@ -11,6 +11,9 @@ namespace TietoCRM.Models
         private decimal id_pk;
         public decimal ID_PK { get { return id_pk; } set { id_pk = value; } }
 
+        private decimal levelpopulation;
+        public decimal LevelPopulation { get { return levelpopulation; } set { levelpopulation = value; } }
+
         private decimal minpopulation;
         public decimal MinPopulation { get { return minpopulation; } set { minpopulation = value; } }
 
@@ -35,7 +38,7 @@ namespace TietoCRM.Models
             {
                 connection.Open();
 
-                String query = "SELECT [ID_PK], [MinPopulation], [MaxPopulation] FROM " + databasePrefix + "Population Order By 2";
+                String query = "SELECT [ID_PK], LevelPopulation, [MinPopulation], [MaxPopulation] FROM " + databasePrefix + "Population Order By 2";
 
                 SqlCommand command = new SqlCommand(query, connection);
 

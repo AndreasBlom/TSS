@@ -360,7 +360,7 @@ namespace TietoCRM.Models
                 }
                 query = query.Remove(query.Length - 1);
 
-                if (returnId)
+                if (returnId && this.table != "Population")
                 {
                     foreach (PropertyInfo pi in this.propertyInfos)
                     {

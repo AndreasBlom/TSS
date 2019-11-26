@@ -28,7 +28,7 @@
                     @{
                         foreach (System.Reflection.PropertyInfo pi in ViewBag.Properties)
                         {
-                            if (!pi.Name.Equals("ID_PK"))
+                            if (!pi.Name.Equals("ID_PK") && !pi.Name.Equals("LevelPopulation"))
                             {
                                 String pName = pi.Name.Replace("_", " ");
 
